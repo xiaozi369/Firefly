@@ -1,0 +1,18 @@
+---
+// Vercel Web Analytics component
+// Using vanilla JS injection method for Astro compatibility
+---
+
+<script is:inline data-swup-ignore-script>
+	window.va =
+		window.va ||
+		function () {
+			(window.vaq = window.vaq || []).push(arguments);
+		};
+</script>
+<script
+	is:inline
+	data-swup-ignore-script
+	defer
+	src="/_vercel/insights/script.js"
+></script>
