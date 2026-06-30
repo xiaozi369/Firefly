@@ -9,10 +9,10 @@ export const profileConfig: ProfileConfig = {
 	avatar: "assets/images/avatar.avif",
 
 	// 名字
-	name: "Firefly",
+	name: "晓子ya",
 
 	// 个人签名
-	bio: "Hello, I'm Firefly.",
+	bio: "Hello, I'm 晓子ya.",
 
 	// 链接配置
 	// 已经预装的图标集：fa7-brands，fa7-regular，fa7-solid，material-symbols，simple-icons
@@ -24,19 +24,19 @@ export const profileConfig: ProfileConfig = {
 		{
 			name: "qq",
 			icon: "fa7-brands:qq",
-			url: "https://qm.qq.com/q/ZGsFa8qX2G",
+			url: "https://qun.qq.com/universal-share/share?ac=1&authKey=jBJhaO8p7H0NutTLekK5OpF8flArbZO1WBbV9/zyw6d3lc1TEgjV6IH14Ssd3vCp&busi_data=eyJncm91cENvZGUiOiI5MzkyMjY1OTUiLCJ0b2tlbiI6InlXN1UvbzNzR25NZHA1ZHVLV1BaMUNGdlhkMk4wWmlpMWdRSVBndTMySXB0eFR3REpYR0VFdUdCcmtheWxSVDgiLCJ1aW4iOiIxNDE0ODcxNTY5In0=&data=hZ9woQKpf-e-f8zhqKdKEthDm4887gUPOTVp4WuYfYEGWzLFSTH9Y_imfkm8EaNOUISIRTBDRckbyt5yDY1pPg&svctype=4&tempid=h5_group_info",
 			showName: false,
 		},
 		{
 			name: "GitHub",
 			icon: "fa7-brands:github",
-			url: "https://github.com/CuteLeaf",
+			url: "https://github.com/xiaozi369",
 			showName: false,
 		},
 		{
 			name: "Email",
 			icon: "fa7-solid:envelope",
-			url: "mailto:xiaye@msn.com",
+			url: "mailto:xiaoziya0310@163.com",
 			showName: false,
 		},
 		{
