@@ -78,30 +78,24 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 		// 子菜单
 		children: [
 			{
-				name: "GitHub",
-				url: "https://github.com/CuteLeaf/Firefly",
-				external: true,
-				icon: "fa7-brands:github",
-			},
+			     name: "GitHub",
+			     url: "https://github.com/xiaozi369",
+			     external: true,
+			     icon: "fa7-brands:github",
+			    },
 			{
-				name: "Gitee",
-				url: "https://gitee.com/CuteLeaf/Firefly",
-				external: true,
-				icon: "fa7-brands:gitee",
-			},
-			{
-				name: "QQ交流群",
-				url: "https://qm.qq.com/q/ZGsFa8qX2G",
-				external: true,
-				icon: "fa7-brands:qq",
-			},
-			{
-				name: "Firefly文档",
-				url: "https://docs-firefly.cuteleaf.cn",
-				external: true,
-				icon: "material-symbols:docs",
-			},
-		],
+			         name: "QQ交流群",
+			         url: "https://qun.qq.com/universal-share/share?ac=1&authKey=jBJhaO8p7H0NutTLekK5OpF8flArbZO1WBbV9/zyw6d3lc1TEgjV6IH14Ssd3vCp&busi_data=eyJncm91cENvZGUiOiI5MzkyMjY1OTUiLCJ0b2tlbiI6InlXN1UvbzNzR25NZHA1ZHVLV1BaMUNGdlhkMk4wWmlpMWdRSVBndTMySXB0eFR3REpYR0VFdUdCcmtheWxSVDgiLCJ1aW4iOiIxNDE0ODcxNTY5In0=&data=hZ9woQKpf-e-f8zhqKdKEthDm4887gUPOTVp4WuYfYEGWzLFSTH9Y_imfkm8EaNOUISIRTBDRckbyt5yDY1pPg&svctype=4&tempid=h5_group_info",
+			         external: true,
+			         icon: "fa7-brands:qq",
+			        },
+			    {
+			         name: "QQ交流2群",
+			         url: "https://qun.qq.com/universal-share/share?ac=1&authKey=smyJq32pfsd%2BD8ahqD4gS3sbVkD5EWjiakBe0lCnaCr30RVUmcDwzf5RB3uQi6MO&busi_data=eyJncm91cENvZGUiOiIxMDc2NjczODk3IiwidG9rZW4iOiJFK0NxeitIZzhtWmhwaDRtR05mKzBnQTBWT2hCOTRQWmtaZm9BYzVPc2xnc1ZUNFdyYVpTS0w5WS9JMS91WUY3IiwidWluIjoiMTQxNDg3MTU2OSJ9&data=RRXd8tZgGWgxa_kRQIcazJhQAqCc-X4SRq9fnSJdkJ-iukLX9Xcez35uR3nqFD22F_2QE85sECLzSc0kHt_Ttw&svctype=4&tempid=h5_group_info",
+			         external: true,
+			         icon: "fa7-brands:qq",
+			        },
+			   ],
 	});
 
 	// 文档链接
