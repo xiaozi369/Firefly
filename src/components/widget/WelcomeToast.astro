@@ -1,0 +1,191 @@
+---
+// 访客欢迎提示组件
+// 通过 IP 定位获取访客地区，在首页右下角弹窗显示欢迎信息
+---
+
+<script>
+	let hasShownToast = false;
+
+	function createWelcomeToast() {
+		const toast = document.createElement("div");
+		toast.id = "welcome-toast";
+
+		// 最外层容器样式
+		Object.assign(toast.style, {
+			position: "fixed",
+			bottom: "1rem",
+			right: "1rem",
+			zIndex: "9999",
+			maxWidth: "calc(100vw - 2rem)",
+			transform: "translateY(100%)",
+			opacity: "0",
+			transition: "transform 0.5s ease-out, opacity 0.5s ease-out",
+			pointerEvents: "none",
+		});
+
+		// 判断是否深色模式
+		const isDark = document.documentElement.classList.contains("dark");
+
+		// 卡片
+		const card = document.createElement("div");
+		Object.assign(card.style, {
+			pointerEvents: "auto",
+			background: isDark ? "rgba(30, 30, 46, 0.95)" : "rgba(255, 255, 255, 0.95)",
+			border: isDark ? "1px solid rgba(255, 255, 255, 0.1)" : "1px solid rgba(0, 0, 0, 0.1)",
+			borderRadius: "0.75rem",
+			boxShadow: "0 4px 24px rgba(0, 0, 0, 0.12)",
+			padding: "1rem",
+			maxWidth: "20rem",
+			backdropFilter: "blur(12px)",
+			WebkitBackdropFilter: "blur(12px)",
+		});
+
+		// 内容容器 flex
+		const content = document.createElement("div");
+		Object.assign(content.style, {
+			display: "flex",
+			alignItems: "flex-start",
+			gap: "0.75rem",
+		});
+
+		// 图标
+		const icon = document.createElement("div");
+		icon.textContent = "👋";
+		Object.assign(icon.style, {
+			flexShrink: "0",
+			fontSize: "1.5rem",
+			lineHeight: "1",
+		});
+
+		// 文字区域
+		const body = document.createElement("div");
+		Object.assign(body.style, {
+			flex: "1",
+			minWidth: "0",
+		});
+
+		// 主消息
+		const msg = document.createElement("p");
+		msg.id = "welcome-message";
+		msg.textContent = "正在加载...";
+		Object.assign(msg.style, {
+			margin: "0",
+			fontSize: "0.875rem",
+			fontWeight: "600",
+			color: isDark ? "#e2e8f0" : "#1a1a2e",
+			lineHeight: "1.4",
+		});
+
+		// 副标题
+		const sub = document.createElement("p");
+		sub.textContent = "欢迎来到我的博客";
+		Object.assign(sub.style, {
+			margin: "0.25rem 0 0",
+			fontSize: "0.75rem",
+			color: isDark ? "#94a3b8" : "#64748b",
+			fontStyle: "italic",
+		});
+
+		// 关闭按钮
+		const closeBtn = document.createElement("button");
+		closeBtn.innerHTML = `<svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>`;
+		closeBtn.setAttribute("aria-label", "关闭");
+		Object.assign(closeBtn.style, {
+			flexShrink: "0",
+			background: "none",
+			border: "none",
+			cursor: "pointer",
+			color: isDark ? "#64748b" : "#94a3b8",
+			padding: "0.125rem",
+			borderRadius: "0.25rem",
+			transition: "color 0.2s ease",
+		});
+		closeBtn.onmouseenter = () => {
+			closeBtn.style.color = isDark ? "#e2e8f0" : "#1a1a2e";
+		};
+		closeBtn.onmouseleave = () => {
+			closeBtn.style.color = isDark ? "#64748b" : "#94a3b8";
+		};
+		closeBtn.onclick = closeWelcomeToast;
+
+		// 组装
+		body.appendChild(msg);
+		body.appendChild(sub);
+		content.appendChild(icon);
+		content.appendChild(body);
+		content.appendChild(closeBtn);
+		card.appendChild(content);
+		toast.appendChild(card);
+		document.body.appendChild(toast);
+
+		// 移动端适配
+		if (window.innerWidth <= 640) {
+			toast.style.left = "50%";
+			toast.style.right = "auto";
+			toast.style.width = "90%";
+			toast.style.maxWidth = "none";
+			toast.style.transform = "translateX(-50%) translateY(100%)";
+			card.style.maxWidth = "none";
+			card.style.width = "100%";
+		}
+
+		return toast;
+	}
+
+	function closeWelcomeToast() {
+		const toast = document.getElementById("welcome-toast");
+		if (toast) {
+			toast.style.transform = window.innerWidth <= 640
+				? "translateX(-50%) translateY(100%)"
+				: "translateY(100%)";
+			toast.style.opacity = "0";
+			setTimeout(() => { toast.remove(); }, 500);
+		}
+	}
+
+	async function fetchLocation() {
+		try {
+			const response = await fetch("https://v2.xxapi.cn/api/ip");
+			const data = await response.json();
+			if (data.code === 200 && data.data) {
+				const locationText = `你好，来自${data.data.address}的朋友`;
+				const messageEl = document.getElementById("welcome-message");
+				if (messageEl) messageEl.textContent = locationText;
+			}
+		} catch (error) {
+			const messageEl = document.getElementById("welcome-message");
+			if (messageEl) messageEl.textContent = "你好，欢迎来到我的博客";
+		}
+	}
+
+	async function showWelcomeToast() {
+		if (hasShownToast) return;
+		const toast = createWelcomeToast();
+		setTimeout(() => {
+			toast.style.transform = window.innerWidth <= 640
+				? "translateX(-50%) translateY(0)"
+				: "translateY(0)";
+			toast.style.opacity = "1";
+		}, 100);
+		hasShownToast = true;
+		await fetchLocation();
+		setTimeout(() => { closeWelcomeToast(); }, 5000);
+	}
+
+	function initWelcome() {
+		const isHomePage =
+			window.location.pathname === "/" || window.location.pathname === "/index.html";
+		if (isHomePage) {
+			showWelcomeToast();
+		}
+	}
+
+	if (document.readyState === "loading") {
+		document.addEventListener("DOMContentLoaded", initWelcome);
+		document.addEventListener("astro:page-load", initWelcome);
+	} else {
+		initWelcome();
+	}
+
+	(window as any).closeWelcomeToast = closeWelcomeToast;
+</script>
