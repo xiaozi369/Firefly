@@ -24,7 +24,7 @@ export const profileConfig: ProfileConfig = {
 		{
 			name: "qq",
 			icon: "fa7-brands:qq",
-			url: "https://qun.qq.com/universal-share/share?ac=1&authKey=jBJhaO8p7H0NutTLekK5OpF8flArbZO1WBbV9/zyw6d3lc1TEgjV6IH14Ssd3vCp&busi_data=eyJncm91cENvZGUiOiI5MzkyMjY1OTUiLCJ0b2tlbiI6InlXN1UvbzNzR25NZHA1ZHVLV1BaMUNGdlhkMk4wWmlpMWdRSVBndTMySXB0eFR3REpYR0VFdUdCcmtheWxSVDgiLCJ1aW4iOiIxNDE0ODcxNTY5In0=&data=hZ9woQKpf-e-f8zhqKdKEthDm4887gUPOTVp4WuYfYEGWzLFSTH9Y_imfkm8EaNOUISIRTBDRckbyt5yDY1pPg&svctype=4&tempid=h5_group_info",
+			url: "https://qm.qq.com/q/DzZKrtyivm",
 			showName: false,
 		},
 		{
@@ -34,12 +34,18 @@ export const profileConfig: ProfileConfig = {
 			showName: false,
 		},
 		{
-			name: "Email",
-			icon: "fa7-solid:envelope",
-			url: "mailto:xiaoziya0310@163.com",
-			showName: false,
-		},
-		{
+		    name: "Email",
+		    icon: "fa7-solid:envelope",
+		    url: "mailto:xiaoziya0310@163.com",
+		    showName: false,
+		   },
+		   {
+		    name: "B站",
+		    icon: "simple-icons:bilibili",
+		    url: "https://space.bilibili.com/141452636",
+		    showName: false,
+		   },
+		   {
 			name: "RSS",
 			icon: "fa7-solid:rss",
 			url: "/rss/",
