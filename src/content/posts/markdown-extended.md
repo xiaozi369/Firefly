@@ -7,6 +7,9 @@ image: ""
 tags: [演示, 示例, Markdown, Firefly]
 category: "文章示例"
 draft: true
+slug: markdown-extended
+series: "Firefly 功能示例2"
+seriesOrder: 2
 ---
 
 ## GitHub 仓库卡片
