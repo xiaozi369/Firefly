@@ -34,5 +34,10 @@
   "public:assets/images/sponsor/wechat.png": "d5d5d5dad9d7dbd8cf",
   "public:assets/images/sponsor/alipay.png": "8ebbde91bedf93c0e0",
   "public:assets/images/ad/ad1.webp": "a1b8b68a8e918c8f93",
-  "src:content/projects/images/firefly.avif": "b5b0b3bcb6bbe0e0df"
+  "src:content/projects/images/firefly.avif": "b5b0b3bcb6bbe0e0df",
+  "src:content/posts/images/Atomcode/5.png": "1f1f1f101010101111",
+  "src:content/posts/images/Atomcode/4.png": "f0eff7f7f8f9f4f2f0",
+  "src:content/posts/images/Atomcode/3.png": "2b2b2a0d0e0b131711",
+  "src:content/posts/images/Atomcode/2.png": "1f221f1616160c0c0c",
+  "src:content/posts/images/Atomcode/1.png": "c9c2b99c9892c2c0bd"
 }
