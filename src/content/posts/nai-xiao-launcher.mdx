@@ -1,0 +1,93 @@
+---
+title: NAI-晓启动器 —— 支持 N/A/I 卡一键运行 ComfyUI
+published: 2026-10-14
+description: 'NAI-晓启动器是一款面向 ComfyUI 的一键启动工具，支持 NVIDIA / AMD / Intel 显卡，免去繁琐的环境配置，下载解压即可运行。本文介绍功能特性、下载地址与使用步骤。'
+image: './images/nai-xiao/1.avif'
+tags: [NAI, ComfyUI, AI绘画, 启动器, 工具]
+category: '实用工具'
+draft: false
+pinned: false
+slug: nai-xiao-launcher
+---
+
+import { Badge, StepItem, Steps, Timeline, TimelineItem } from "@components/firefly-mdx";
+
+**NAI-晓启动器** 是一款面向 **ComfyUI** 的一键启动工具，把 Python 环境、依赖与启动流程全都打包管理好，**支持 NVIDIA / AMD / Intel 显卡**，下载解压即可运行，帮你绕开 ComfyUI 繁琐的环境配置。<Badge type="tip">免费</Badge> <Badge>支持 N / A / I 卡</Badge>
+
+> [!NOTE] 关于本工具
+> NAI-晓启动器专注于「让 ComfyUI 跑起来更简单」，适合不想折腾 Python、CUDA、ROCm 环境的用户，尤其对 AMD / Intel 显卡用户友好。
+
+## 🎬 视频演示
+
+<iframe
+  width="100%"
+  height="468"
+  src="//player.bilibili.com/player.html?bvid=BV1BBKK6AEFn&p=1&autoplay=0"
+  title="NAI-晓启动器 视频演示"
+  scrolling="no"
+  frameBorder="no"
+  allowFullScreen
+/>
+
+## ✨ 功能特性
+
+- **一键启动 ComfyUI**：无需手动安装 Python、配置依赖，双击即用。
+- **三卡支持**：NVIDIA（CUDA）、AMD、Intel（Arc 核显 / 独显）均可运行。
+- **环境隔离**：自带独立运行环境，不污染系统里的其他 Python 环境。
+- **开箱即用**：下载解压 → 双击启动，全程无需敲命令行。
+- **自动处理依赖**：首次启动自动补齐缺失组件，降低上手门槛。
+
+[grid]
+![界面预览 1](./images/nai-xiao/1.avif)
+![界面预览 2](./images/nai-xiao/2.avif)
+![界面预览 3](./images/nai-xiao/3.avif)
+[/grid]
+
+## 📥 下载
+
+> [!TIP] 三个网盘任选其一
+> 三个网盘是同一份文件，选你方便的即可，提取码见下方表格。
+
+| 网盘 | 提取码 | 下载链接 |
+| :--- | :---: | :--- |
+| 123 云盘 | `xiao` | [https://www.123865.com/s/GfHwjv-EZfD3](https://www.123865.com/s/GfHwjv-EZfD3) |
+| 夸克网盘 | 无 | [https://pan.quark.cn/s/39a4491daf05](https://pan.quark.cn/s/39a4491daf05) |
+| 百度网盘 | `hhfg` | [https://pan.baidu.com/s/1OeA4F-dgYBCH81xn-A6MVw?pwd=hhfg](https://pan.baidu.com/s/1OeA4F-dgYBCH81xn-A6MVw?pwd=hhfg) |
+
+## 🚀 快速上手
+
+<Steps>
+  <StepItem title="下载并解压" icon="rocket">
+    从上方任一网盘下载压缩包，解压到**纯英文路径**下（避免中文或空格路径导致启动异常）。
+  </StepItem>
+  <StepItem title="双击启动" type="tip" icon="code">
+    运行 NAI-晓启动器，首次启动会自动准备运行环境，请耐心等待。
+  </StepItem>
+  <StepItem title="开始使用" icon="flag">
+    启动完成后会自动打开 ComfyUI 的网页界面，即可开始使用。
+  </StepItem>
+</Steps>
+
+## 💡 使用建议
+
+- **第一次启动会比较慢**：需要初始化环境、下载依赖，属正常现象，之后启动会快很多。
+- **保持显卡驱动为最新**：N 卡装好 GeForce 驱动，A 卡用较新的 Adrenalin，I 卡用较新的 Arc / 核显驱动。
+- **路径尽量纯英文**：很多人启动失败都是因为解压路径里有中文或空格。
+- **显存不足时**：可在 ComfyUI 里降低分辨率或使用更低精度的模型。
+
+## 📝 更新日志
+
+<Timeline>
+  <TimelineItem date="2026-10-14" title="NAI-晓启动器 发布" icon="rocket">
+    - 支持 NVIDIA / AMD / Intel 显卡运行 ComfyUI
+    - 一键启动，免环境配置
+  </TimelineItem>
+</Timeline>
+
+## 💬 反馈
+
+使用中遇到任何问题或有建议，欢迎直接在**下方评论区**留言，我会尽快回复。也可以通过 [GitHub](https://github.com/xiaozi369) 找到我。
+
+---
+
+*如果你觉得这个工具好用，欢迎分享给有需要的朋友～*
