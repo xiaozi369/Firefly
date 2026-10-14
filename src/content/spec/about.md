@@ -1,21 +1,24 @@
-# 关于我 / About Me
+# 关于我
 
-你好！我是 **晓子ya** ，欢迎来到我的个人博客。
+你好，我是 **晓子ya** 👋 欢迎来到我的小屋。
 
-## 🛠️ 关于本站
+一个喜欢折腾的技术爱好者，也是这个博客的主人。平时喜欢写代码、研究各种工具和自建服务，也喜欢把踩过的坑和学到的东西记录下来。
 
-这个网站使用 **Astro** 框架构建，采用了 [Firefly](https://github.com/CuteLeaf/Firefly) 模板。
+## 我在做什么
 
-**Firefly** 是一款基于 Astro 框架和 Fuwari 模板开发的清新美观且现代化个人博客主题模板，专为技术爱好者和内容创作者设计。
+- 🔧 折腾各种技术、工具与自建服务
+- ✍️ 在这里记录技术笔记、生活碎片与一些想法
+- 🌱 保持好奇，持续学习
 
-**⭐Firefly 开源地址：[https://github.com/CuteLeaf/Firefly](https://github.com/CuteLeaf/Firefly)**
+## 找到我
 
-**⭐Fuwari 开源地址：[https://github.com/saicaca/fuwari](https://github.com/saicaca/fuwari)**
-
-::github{repo="CuteLeaf/Firefly"}
-
-::github{repo="saicaca/fuwari"}
+| 平台 | 账号 / 主页 |
+| :--- | :--- |
+| GitHub | [github.com/xiaozi369](https://github.com/xiaozi369) |
+| 邮箱 | [xiaoziya0310@163.com](mailto:xiaoziya0310@163.com) |
+| Bilibili | [space.bilibili.com/141452636](https://space.bilibili.com/141452636) |
+| QQ | [加我好友](https://qm.qq.com/q/DzZKrtyivm) |
 
 ---
 
-*感谢你的来访！希望在这里能找到对你有用的内容！*
+*感谢你的来访，欢迎随便逛逛，也欢迎到留言板留下你的足迹～*

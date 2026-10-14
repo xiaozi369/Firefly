@@ -10,5 +10,11 @@
 		"language": "Astro",
 		"avatarUrl": "https://avatars.githubusercontent.com/u/25200299?v=4",
 		"license": "MIT"
+	},
+	"xiaozi369/firefly": {
+		"description": "晓子ya 的博客源码。",
+		"language": "Astro",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/119428460?v=4",
+		"license": "MIT"
 	}
 }
