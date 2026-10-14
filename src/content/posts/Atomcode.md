@@ -6,7 +6,7 @@ image: 'images/Atomcode/1.png'
 tags: [AtomCode, 免费模型, AI教程, LLM]
 category: 'AI教程'
 draft: false
-pinned: true
+pinned: false
 ---
 
 ## 第一步：下载 AtomCode
